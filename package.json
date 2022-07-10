@@ -1,0 +1,19 @@
+{
+  "name": "into-graphql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabemiller/into-graphql-server.git"
+  },
+  "author": "Gabor Molnar <gabormolnar92@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabemiller/into-graphql-server/issues"
+  },
+  "homepage": "https://github.com/gabemiller/into-graphql-server#readme"
+}
