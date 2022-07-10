@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/gabemiller/into-graphql-server/issues"
   },
-  "homepage": "https://github.com/gabemiller/into-graphql-server#readme"
+  "homepage": "https://github.com/gabemiller/into-graphql-server#readme",
+  "dependencies": {
+    "apollo-server": "3.9.0",
+    "graphql": "16.5.0",
+    "nanoid": "4.0.0"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
+  },
+  "type": "module"
 }
