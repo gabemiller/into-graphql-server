@@ -42,7 +42,7 @@ const resolvers = {
     items: () => todoItems,
   },
   Mutation: {
-    createTodoItem: (value, status) => {
+    createTodoItem: (parent, { value, status }) => {
       const newTodoItem = {
         id: nanoid(),
         value: value,
@@ -50,6 +50,17 @@ const resolvers = {
       }
       todoItems.push(newTodoItem)
       return newTodoItem
+    },
+    updateTodoItem: (parent, { id, status }) => {
+      const updatedTodoItem = todoItems.find((item) => item.id === id)
+      updatedTodoItem.status = status
+      return updatedTodoItem
+    },
+    deleteTodoItem: (parent, { id }) => {
+      const deletedTodoItemIndex = todoItems.findIndex((item) => item.id === id)
+      const deletedTodoItemCopy = { ...todoItems[deletedTodoItemIndex] }
+      todoItems.splice(deletedTodoItemIndex, 1)
+      return deletedTodoItemCopy
     },
   },
 }
